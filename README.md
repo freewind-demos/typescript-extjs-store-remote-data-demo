@@ -1,9 +1,9 @@
-TypeScript ExtJS Custom Controller ViewModel Demo
+TypeScript ExtJS Direct Memory Store Demo
 =================================================
 
-View中的listeners中的events对应的handler，需要注意：
-1. 如果是View中自己的listeners，会找View上定义的method
-2. 如果是View中嵌入的View的listeners，会找View中controller中定义的method，再找View上定义的method
+Store是用来表现类似于table的数据，所以是数组。
+
+这里没有定义Model，直接在store中定义fields，并且数据直接定义在代码中（通常会通过ajax从后端拿）
 
 ```
 npm install
