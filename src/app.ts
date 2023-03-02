@@ -15,15 +15,14 @@ Ext.onReady(() => {
         width: 400,
         title: 'Hello world',
         store: new Ext.data.Store({
-            data: [
-                { name: 'Jean Luc', email: "jeanluc.picard@enterprise.com", phone: "555-111-1111" },
-                { name: 'Worf', email: "worf.moghsson@enterprise.com", phone: "555-222-2222" },
-                { name: 'Deanna', email: "deanna.troi@enterprise.com", phone: "555-333-3333" },
-                { name: 'Data', email: "mr.data@enterprise.com", phone: "555-444-4444" }
-            ],
             proxy: {
-                type: 'memory'
-            }
+                type: 'ajax',
+                url: 'http://127.0.0.1:9999/users.json',
+                reader: {
+                    type: 'json',
+                }
+            },
+            autoLoad: true
         }),
         columns: [
             { text: 'Name', dataIndex: 'name' },

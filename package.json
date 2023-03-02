@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "vite --open"
+    "start": "vite --open",
+    "server": "http-server ./data -c-1 -p 9999 --cors"
   },
   "dependencies": {
     "ts-node": "10.3.0"
